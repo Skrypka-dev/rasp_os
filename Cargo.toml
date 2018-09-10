@@ -1,0 +1,6 @@
+[package]
+name = "rpi3b_os"
+version = "0.1.0"
+authors = ["Oleksii Skrypka <oleksii.skrypka@globallogic.com>"]
+
+[dependencies]

@@ -15,3 +15,6 @@ kernel8.img: kernel8
 run:
 	qemu-system-aarch64 -M raspi3 -kernel kernel8.img
 
+clean:
+	cargo clean
+

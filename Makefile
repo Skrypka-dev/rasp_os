@@ -9,6 +9,12 @@ target/$(target)/debug/kernel8: src/main.rs
 	cargo xbuild --target=$(target)
 	cp $@ .
 
+ifeq ($(DEBUG),1)
+kernel8: target/$(TARGET)/debug/kernel8
+else
+kernel8: target/$(TARGET)/release/kernel8
+endif
+
 kernel8.img: kernel8
 	$(objcopy) $(objcopy_flags) $< kernel8.img
 

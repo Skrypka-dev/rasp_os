@@ -33,7 +33,7 @@ pub unsafe extern "C" fn reset() -> ! {
     }
 
     // Zeroes the .bss section
-    r0::zero_bss(&mut _bss_start, &mut _bss_end);
+    r0::zero_bss(&mut __bss_start, &mut __bss_end);
 
     extern "Rust" {
         fn main() -> !;

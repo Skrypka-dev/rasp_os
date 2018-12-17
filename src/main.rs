@@ -1,7 +1,11 @@
 #![no_std]
 #![no_main]
-#![feature(global_asm)]
 
-extern crate panic_abort;
+#[macro_use]
+extern crate rpi3_boot;
 
-global_asm!(include_str!("boot_cores.S"));
+entry!(kernel_entry);
+
+fn kernel_entry() -> ! {
+    loop {}
+}

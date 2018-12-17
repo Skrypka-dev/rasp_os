@@ -1,7 +1,9 @@
 [package]
-name = "rpi3b_os"
+name = "rpi3_boot"
 version = "0.1.0"
 authors = ["Oleksii Skrypka <oleksii.skrypka@globallogic.com>"]
+edition = "2018"
 
 [dependencies]
-rpi3_boot = { path = "rpi3_boot" }
+panic-abort = "0.3.1"
+r0 = "0.2.2"

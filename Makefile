@@ -1,12 +1,16 @@
-target = aarch64-unknown-none
+TARGET = aarch64-unknown-none
 
 objcopy = cargo objcopy --
 objcopy_flags = --strip-all -O binary
 
 all: clean kernel8.img
 
-target/$(target)/debug/kernel8: src/main.rs
-	cargo xbuild --target=$(target)
+target/$(TARGET)/debug/kernel8: src/main.rs
+	cargo xbuild --target=$(TARGET)
+	cp $@ .
+
+target/$(TARGET)/release/kernel8: src/main.rs
+	cargo xbuild --target=$(TARGET) --release
 	cp $@ .
 
 ifeq ($(DEBUG),1)

@@ -1,4 +1,11 @@
 [[package]]
+name = "kernel8"
+version = "0.1.0"
+dependencies = [
+ "rpi3_boot 0.1.0",
+]
+
+[[package]]
 name = "panic-abort"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -14,13 +21,6 @@ version = "0.1.0"
 dependencies = [
  "panic-abort 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "r0 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "rpi3b_os"
-version = "0.1.0"
-dependencies = [
- "rpi3_boot 0.1.0",
 ]
 
 [metadata]
